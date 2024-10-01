@@ -1,0 +1,222 @@
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto; /* Una sola barra de desplazamiento */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #5C4E95;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    max-width: 600px;
+    height: 220px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-link {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-link:hover {
+    color: #004499;
+    text-decoration: underline;
+}
+
+.card-subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    display: flex;               /* Flexbox para alinear la imagen y el texto en una fila */
+    align-items: center;         /* Centra los elementos verticalmente */
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+
+figure {
+    text-align: center; /* Centra el contenido de la figura */
+    margin: 20px 0; /* Añade un margen arriba y abajo de la figura */
+}
+
+figcaption {
+    font-size: 0.9em; /* Ajusta el tamaño de la fuente del título */
+    color: #555; /* Cambia el color del texto del título */
+    margin-top: 10px; /* Añade un espacio entre la imagen y el título */
+}
+
+h1 {
+    color: #8a8635; /* Color del título */
+    font-size: 2.5em; /* Ajuste del tamaño del título */
+}
+
+.home_img {
+    max-width: 40%; /* Ajusta la imagen para que ocupe el 40% del contenedor */
+    height: auto;
+    margin-right: 20px; /* Añade espacio entre la imagen y el texto */
+    object-fit: contain; /* Evita distorsión de la imagen */
+}
+
+.left-aligned-centered {
+    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 80%; /* Ajusta el ancho máximo para evitar que el texto se extienda demasiado */
+}
+
+li {
+    margin: 10px 0;
+}
+
+small {
+    margin-top: 20px; /* Añade margen superior para separar la fecha */
+    display: block;
+    font-size: 0.9em; /* Ajusta el tamaño de la fecha */
+}
+
+.slide {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh; /* Cada diapositiva ocupa el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd; /* Añadir espacio definido entre diapositivas */
+    box-shadow: 0 0 10px rgba(115, 114, 115, 0.1);
+    margin: auto;
+    overflow: hidden; /* Evita desbordamiento dentro de las diapositivas */
+}
+
+.slide-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para iframes */
+.slide_iframe_1 {
+    width: 70%;          /* Usar 100% en lugar de max-width */
+    height: 600vh;         /* Ajustar la altura en porcentaje de la vista */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border: none;         /* Asegúrate de que no haya borde alrededor del iframe */
+    overflow: hidden;     /* Evita cualquier overflow innecesario */
+}
+
+/* Estilo para iframes */
+.slide_iframe_2 {
+    width: 100%;          /* Usar 100% en lugar de max-width */
+    height: 100vh;         /* Ajustar la altura en porcentaje de la vista */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border: none;         /* Asegúrate de que no haya borde alrededor del iframe */
+    overflow: hidden;     /* Evita cualquier overflow innecesario */
+}
+
+/* Estilo para imágenes */
+.slide_img {
+    max-width: 70%;
+    max-height: 70vh;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para videos */
+.slide_video {
+    max-width: 50%;
+    max-height: 50vh;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-content {
+    max-width: 55%; /* El texto ocupará el 55% del contenedor */
+    text-align: left; /* Alineación a la izquierda */
+    margin: auto; /* Centra el contenedor de texto */
+    padding-left: 20px; /* Añade un pequeño margen izquierdo para la alineación */
+}
+
+.texto-destacado {
+    color: #8a8635; /* Cambia el color al que prefieras */
+    font-weight: bold; /* Pone el texto en negrita */
+    font-size: 15px; /* Ajusta el tamaño del texto */
+}
+
+.titulo-colorido {
+    color: #5C4E95; /* Elige el color que prefieras (aquí es un color rojo anaranjado) */
+    font-size: 1.5em;
+}
+
+.titulo-colorido2 {
+    color: #5C4E95; /* Elige el color que prefieras (aquí es un color rojo anaranjado) */
+    font-size: 1.1em;
+}
+
+.titulo-colorido3 {
+    color: #8a8635; /* Elige el color que prefieras (aquí es un color rojo anaranjado) */
+    font-size: 0.3em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
