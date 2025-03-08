@@ -111,6 +111,10 @@ h1 {
 .left-aligned-centered {
     text-align: left; /* Alinea el texto a la izquierda */
     max-width: 80%; /* Ajusta el ancho máximo para evitar que el texto se extienda demasiado */
+    font-size: 22px; /* Aumenta el tamaño del texto */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+    font-family: 'Merriweather', serif; /* Mantiene una fuente elegante */
+    color: #222; /* Color oscuro para mejor contraste */
 }
 
 li {
@@ -124,7 +128,7 @@ small {
 }
 
 .slide {
-    width: 100%;
+    width: 80%;
     max-width: 1200px;
     height: 100vh; /* Cada diapositiva ocupa el 100% de la altura de la ventana */
     display: flex;
@@ -132,6 +136,29 @@ small {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd; /* Añadir espacio definido entre diapositivas */
+    box-shadow: 0 0 10px rgba(115, 114, 115, 0.1);
+    margin: auto;
+    overflow: hidden; /* Evita desbordamiento dentro de las diapositivas */
+}
+
+.slideM {
+    width: 80%;
+    margin: auto;
+    font-family: 'Merriweather', serif; /* Fuente similar a la segunda imagen */
+    max-width: 1200px;
+    height: 100vh; /* Cada diapositiva ocupa el 100% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-family: 'Merriweather', serif; /* Fuente similar a la segunda imagen */
+    font-size: 22px; /* Tamaño de letra más grande */
+    line-height: 1.8; /* Aumenta la separación entre líneas */
+    color: #222; /* Color oscuro para mejor contraste */
     padding: 20px;
     background-color: #f9f9f9;
     border-bottom: 2px solid #ddd; /* Añadir espacio definido entre diapositivas */
@@ -199,6 +226,17 @@ small {
     color: #8a8635; /* Cambia el color al que prefieras */
     font-weight: bold; /* Pone el texto en negrita */
     font-size: 15px; /* Ajusta el tamaño del texto */
+}
+
+.texto-destacado2 {
+    text-align: justify; /* Justificar el texto para mejorar la lectura */
+    max-width: 60%; /* Reduce el ancho del texto para que sea más compacto */
+    font-family: 'Merriweather', serif; /* Fuente elegante similar a la de la imagen */
+    font-size: 24px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+    line-height: 1.8; /* Espaciado entre líneas más amplio */
+    font-weight: 500; /* Hace el texto más grueso sin ser negrita */
+    margin: 0 auto 20px auto; /* Centra el bloque de texto y da espacio entre párrafos */
+    color: #222; /* Mantiene un color oscuro elegante */
 }
 
 .titulo-colorido {
