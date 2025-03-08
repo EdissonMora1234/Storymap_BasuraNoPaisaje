@@ -16,23 +16,26 @@ document.addEventListener('DOMContentLoaded', function () {
         slides[index].scrollIntoView({ behavior: 'smooth' });
     }
 
-    window.addEventListener('wheel', function(event) {
-        if (event.deltaY > 0) {
-            if (currentSlide < slides.length - 1) {
-                currentSlide++;
-                showSlide(currentSlide);
-                scrollToSlide(currentSlide);
-            }
-        } else {
-            if (currentSlide > 0) {
-                currentSlide--;
-                showSlide(currentSlide);
-                scrollToSlide(currentSlide);
-            }
-        }
-    });
+    let accumulatedScroll = 0;
+    const scrollStep = window.innerHeight / 4; // Movimiento de 1/3 de la diapositiva
 
-    homeButton.addEventListener('click', function() {
+    window.addEventListener('wheel', function(event) {
+        event.preventDefault(); // Prevenir el scroll predeterminado
+
+        accumulatedScroll += event.deltaY; // Acumular desplazamiento
+        if (Math.abs(accumulatedScroll) >= scrollStep) {
+            if (accumulatedScroll > 0 && currentSlide < slides.length - 1) {
+                currentSlide++;
+            } else if (accumulatedScroll < 0 && currentSlide > 0) {
+                currentSlide--;
+            }
+            showSlide(currentSlide);
+            scrollToSlide(currentSlide);
+            accumulatedScroll = 0; // Reiniciar el acumulador después de moverse
+        }
+    }, { passive: false });
+
+    homeButton.addEventListener('click', function () {
         currentSlide = 0;
         showSlide(currentSlide);
         scrollToSlide(currentSlide);
